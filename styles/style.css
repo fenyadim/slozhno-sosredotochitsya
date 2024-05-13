@@ -2,4 +2,107 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+    background-color: var(--background-color);
+    color: var(--accent-color);
+}
+
+.header {
+    position: relative;
+    background-image: var(--header-image-cover);
+    background-position: center;
+    background-size: cover;
+    padding: 10px;
+}
+
+.header::before, .header::after {
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-style: solid;
+    border-color: currentColor;
+}
+
+.header::before {
+    top: 10px;
+    right: 10px;
+    border-width: 1px 1px 0 0;
+}
+
+.header::after {
+    bottom: 10px;
+    left: 10px;
+    border-width: 0 0 1px 1px;
+}
+
+.element-decor {
+    position: absolute;
+    display: var(--display-element-decor);
+    align-items: center;
+    gap: 10px;
+    top: 13px;
+    right: 19px;
+}
+
+.element-decor::after {
+    content: '';
+    display: block;
+    width: 9px;
+    height: 9px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+.header__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    line-height: 99px;
+    color: var(--header-color);
+    text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__description {
+    margin: 55px 0;
+}
+
+.header__theme-menu-list {
+    margin-top: 75px;
+    display: grid;
+    grid-template-columns: 70px;
+    grid-template-rows: repeat(3, 26px);
+    justify-content: right;
+    gap: 11.5px;
+}
+
+.header__theme-menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    outline: none;
+    border: none;
+    text-transform: lowercase;
+    height: 100%;
+    width: 100%;
+    color: var(--menu-color);
+}
+
+.header__theme-menu-button:hover {
+    border: 1px solid rgb(from var(--menu-color) r g b / 40%);
+}
+
+.header__theme-menu-button:focus-visible {
+    border-color: rgb(from var(--menu-color) r g b / 40%);
+    border-width: 0 0 1px 0;
+    border-style: solid;
+}
+
+.header__theme-menu-button_active {
+    border: 1px solid currentColor;
+}
+
+.title-decor {
+    background-color: var(--accent-color);
+    color: var(--title-color);
+    font-weight: 700;
 }
