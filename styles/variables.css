@@ -14,3 +14,9 @@
 
     --global-padding: 10px;
 }
+
+@media (width >= 768px) {
+    :root {
+        --global-padding: 20px;
+    }
+}
