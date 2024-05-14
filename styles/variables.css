@@ -3,5 +3,14 @@
   и их переопределение под различные устройства
 */
 :root {
-    
+    --background-color: #000028;
+    --header-image-cover: url(../images/cover-image-dark.png);
+    --title-color: #DB00FF;
+    --accent-color: #FF0070;
+    --navigation-color: #FF0070;
+    --second-color: #000028;
+    --text-color: #F1B2CE;
+    --display-element-decor: flex;
+
+    --global-padding: 10px;
 }

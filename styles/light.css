@@ -11,10 +11,23 @@
   */
     --background-color: #FFF1F7;
     --header-image-cover: url(../images/cover-image-light.png);
-    --header-color: #FFC2E6;
+    --title-color: #FFC2E6;
     --accent-color: #FF8DCB;
-    --menu-color: #353430;
-    --title-color: #353430;
+    --navigation-color: #353430;
+    --second-color: #353430;
     --text-color: #353430;
     --display-element-decor: none;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-color: #FFF1F7;
+        --header-image-cover: url(../images/cover-image-light.png);
+        --title-color: #FFC2E6;
+        --accent-color: #FF8DCB;
+        --navigation-color: #353430;
+        --second-color: #353430;
+        --text-color: #353430;
+        --display-element-decor: none;
+    }
 }
