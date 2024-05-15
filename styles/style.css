@@ -73,7 +73,7 @@
 .header__description {
     /*margin: 55px 0;*/
     height: min-content;
-    align-self: start;
+    align-self: center;
 }
 
 .header__theme-menu {
