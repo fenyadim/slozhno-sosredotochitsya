@@ -4,6 +4,7 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
     background-color: var(--background-color);
     color: var(--accent-color);
+    background-attachment: fixed;
 }
 
 .header {
@@ -11,7 +12,6 @@
     grid-template-rows: repeat(3, 1fr);
     position: relative;
     background-image: var(--header-image-cover);
-    background-attachment: fixed;
     background-position: center;
     background-size: cover;
     padding: var(--global-padding);
@@ -28,7 +28,7 @@
     height: 25px;
     width: 25px;
     border-style: solid;
-    border-color: currentColor;
+    border-color: var(--navigation-color);
 }
 
 .decorated-zone::before {
@@ -113,6 +113,7 @@
 
 .header__theme-menu-button_active {
     border: 1px solid currentColor;
+    pointer-events: none;
 }
 
 .title-decor {
