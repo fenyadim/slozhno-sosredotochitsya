@@ -2,18 +2,16 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-    background-color: var(--background-color);
     color: var(--accent-color);
+    background: center / cover var(--header-image-cover) no-repeat;
+    background-color: var(--background-color);
     background-attachment: fixed;
 }
 
 .header {
     display: grid;
-    grid-template-rows: 35% 38.5% auto;
+    grid-template-rows: 0.87fr 0.95fr 0.65fr;
     position: relative;
-    background-image: var(--header-image-cover);
-    background-position: center;
-    background-size: cover;
     padding: var(--global-padding);
 }
 
@@ -78,7 +76,6 @@
 
 .header__theme-menu-list {
     display: grid;
-    grid-template-columns: 70px;
     grid-template-rows: repeat(3, 26px);
     justify-content: right;
     gap: 11.5px;
@@ -86,15 +83,15 @@
 
 .header__theme-menu-button {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    padding: 0 13px;
     background: none;
     outline: none;
-    border: none;
+    border: 1px solid transparent;
     text-transform: lowercase;
     height: 100%;
     width: 100%;
     color: var(--navigation-color);
+    cursor: pointer;
 }
 
 .header__theme-menu-button:hover {
@@ -112,28 +109,20 @@
     pointer-events: none;
 }
 
-.title-decor {
-    background-color: var(--accent-color);
-    color: var(--second-color);
-    font-size: 18px;
-    font-weight: 700;
-}
-
 .content {
     padding: var(--global-padding);
+    color: var(--text-color);
     margin: 31px 0;
 }
 
 .content__section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.content__section:not(:nth-child(2n)) {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
+}
+
+.content__section--images {
+    display: flex;
 }
 
 .content__section:not(:last-child) {
@@ -141,13 +130,33 @@
 }
 
 .content__title {
+    width: 100%;
+}
+
+.content__text {
     font-size: 18px;
     color: var(--navigation-color);
+    font-weight: 700;
+}
+
+.content__text--regular {
+    font-weight: 400;
+}
+
+.content__text--decor {
+    background-color: var(--accent-color);
+    color: var(--second-color);
 }
 
 .content__wrapper {
     display: grid;
     gap: 20px;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .articles__title {
@@ -186,6 +195,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-block-start: 10px;
 }
 
 .articles__gallery-image {
@@ -225,11 +235,12 @@
     font-size: var(--title-size);
     color: var(--title-color);
     text-shadow: 2px 2px 0 var(--accent-color);
+    line-height: 130px;
 }
 
 @media (width >= 768px) {
     .header {
-        grid-template-rows: 45% 26.6% auto;
+        grid-template-rows: 1.45fr 0.85fr 0.91fr;
     }
 
     .header__title {
@@ -246,7 +257,6 @@
     }
 
     .content__section:not(:nth-child(2n)) {
-        display: grid;
         grid-template-columns: min-content 2fr;
         gap: 25px;
     }
@@ -264,6 +274,7 @@
         height: 100%;
         gap: 20px;
         grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, min-content);
         grid-template-areas:
                 'sunset sunset ice_cream'
                 'tape books ice_cream'
@@ -274,19 +285,19 @@
 
 @media (width >=1024px) {
     .header {
-        grid-template-rows: 44% 31% auto;
+        grid-template-rows: 1.4fr 1fr 0.8fr;
     }
     .header__theme-menu {
         justify-self: center;
         align-self: start;
     }
     .header__theme-menu-list {
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr;
-        gap: 25px;
+        gap: 10px;
     }
 
-    .content__section:nth-child(2n) .content__wrapper {
-        grid-template-columns: repeat(3, 32%);
+    .content__wrapper--special {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
