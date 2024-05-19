@@ -99,7 +99,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-    border-color: var(--border-hover-color);
+    border-color: currentColor;
     border-width: 0 0 1px 0;
     border-style: solid;
 }
@@ -292,8 +292,7 @@
         align-self: start;
     }
     .header__theme-menu-list {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
+        display: flex;
         gap: 10px;
     }
 
