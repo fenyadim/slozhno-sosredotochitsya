@@ -16,6 +16,7 @@
     --navigation-color: #353430;
     --second-color: #353430;
     --text-color: #353430;
+    --border-hover-color: #32312D66;
     --display-element-decor: none;
 }
 
@@ -28,6 +29,7 @@
         --navigation-color: #353430;
         --second-color: #353430;
         --text-color: #353430;
+        --border-hover-color: #32312D66;
         --display-element-decor: none;
     }
 }

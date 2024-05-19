@@ -76,7 +76,7 @@
 
 .header__theme-menu-list {
     display: grid;
-    grid-template-rows: repeat(3, 26px);
+    grid-template-rows: repeat(auto-fit, 26px);
     justify-content: right;
     gap: 11.5px;
 }
@@ -95,11 +95,11 @@
 }
 
 .header__theme-menu-button:hover {
-    border: 1px solid rgb(from var(--navigation-color) r g b / 40%);
+    border: 1px solid var(--border-hover-color);
 }
 
 .header__theme-menu-button:focus-visible {
-    border-color: rgb(from var(--navigation-color) r g b / 40%);
+    border-color: var(--border-hover-color);
     border-width: 0 0 1px 0;
     border-style: solid;
 }
